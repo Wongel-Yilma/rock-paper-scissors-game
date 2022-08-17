@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -27,21 +32,75 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="heading-1">Rock Paper Scissors</h1>
+      <h1 class="heading-1">
+        Rock<br />
+        Paper<br />
+        Scissors
+      </h1>
       <div class="score-box">
-        <p>score</p>
-        <p class="score"></p>
+        <p class="score-title">score</p>
+        <p class="score">17</p>
       </div>
     </header>
     <main>
-      <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
-      <button class="btn-rules">Rules</button>
+      <div class="game-section">
+        <div class="container hidden">
+          <img
+            class="icon-triangle"
+            src="images/bg-triangle.svg"
+            alt="big triangle"
+          />
+          <div class="icon-box icon-box-paper">
+            <div class="icon-border-paper"></div>
+            <div class="icon-border-white"></div>
+
+            <img class="icon" src="images/icon-paper.svg" alt="Paper" />
+          </div>
+          <div class="icon-box icon-box-rock">
+            <div class="icon-border-rock"></div>
+            <div class="icon-border-rock-white"></div>
+            <img class="icon" src="images/icon-paper.svg" alt="Paper" />
+          </div>
+          <div class="icon-box icon-box-scissors">
+            <div class="icon-border-white"></div>
+            <div class="icon-border-scissors"></div>
+            <img class="icon" src="images/icon-scissors.svg" alt="Scissors" />
+          </div>
+        </div>
+
+        <div class="playing-container">
+          <h2 class="heading-2">You picked</h2>
+          <h2 class="heading-2">The house picked</h2>
+
+          <div class="choice player-choice">
+            <!-- <div class="circle"></div> -->
+            <div class="icon-box icon-box-rock">
+              <div class="icon-border-rock"></div>
+              <div class="icon-border-white"></div>
+              <img class="icon" src="images/icon-paper.svg" alt="Paper" />
+            </div>
+          </div>
+          <div class="choice computer-choice">
+            <div class="icon-box icon-box-scissors">
+              <div class="icon-border-scissors"></div>
+              <div class="icon-border-white"></div>
+              <img class="icon" src="images/icon-scissors.svg" alt="Scissors" />
+            </div>
+            <div class="circle"></div>
+          </div>
+        </div>
+
+        <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+        <button class="btn-rules">Rules</button>
+      </div>
     </main>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Wongelemengist Yilma Nadew</a>.
-    </div>
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Wongelemengist Yilma Nadew</a>.
+      </div>
+    </footer>
   </body>
 </html>

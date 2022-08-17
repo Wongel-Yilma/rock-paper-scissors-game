@@ -15,6 +15,9 @@
 */
 
 :root {
+  --primary-color: hsl(229, 64%, 46%);
+  --primary-dark: hsl(229, 25%, 31%);
+  --primary-light: hsl(217, 16%, 45%);
   --white-color: #fff;
   --paper-gradient: linear-gradient(
     to bottom,
@@ -33,7 +36,6 @@
   );
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;800&display=swap");
 *,
 *::after,
 *::before {
@@ -41,9 +43,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   background: radial-gradient(
     farthest-corner at 800px 10px,
     hsl(214, 47%, 23%) 0%,
@@ -52,7 +57,184 @@ body {
   background-repeat: no-repeat;
   font-family: "Barlow Semi Condensed";
 }
-
+.header {
+  margin: 3rem auto;
+  width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  outline: 3px solid var(--primary-light);
+  padding: 3rem;
+  border-radius: 2rem;
+}
 .heading-1 {
   color: var(--white-color);
+  font-size: 4rem;
+  line-height: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.score-box {
+  padding: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+}
+.score-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+.score {
+  color: var(--primary-dark);
+  font-size: 4rem;
+}
+
+.game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.container {
+  position: relative;
+  height: 28rem;
+  width: 30rem;
+}
+
+.btn-rules {
+  align-self: flex-end;
+  border: none;
+  padding: 0.6rem 2rem;
+  color: var(--white-color);
+  border-radius: 0.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: var (var(--primary-color));
+  outline: 2px solid var(--primary-light);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-rules:hover {
+  color: var(--primary-light);
+}
+.icon-box {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  background-color: var(--white-color);
+  position: relative;
+  box-shadow: inset 0px 8px #ddd;
+  position: absolute;
+}
+
+.icon {
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon-border-rock,
+.icon-border-paper,
+.icon-border-scissors {
+  width: 14rem;
+  height: 14rem;
+  border-radius: 10rem;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+.icon-border-rock {
+  background-color: hsl(349, 70%, 56%);
+  box-shadow: inset 0px -8px hsl(349, 71%, 52%);
+}
+.icon-border-white {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 10rem;
+  background-color: var(--white-color);
+  box-shadow: inset 0px 8px #ddd;
+}
+
+.icon-border-paper {
+  background-color: hsl(230, 89%, 65%);
+  box-shadow: inset 0px -8px hsl(230, 89%, 62%);
+}
+.icon-border-scissors {
+  background-color: hsl(40, 84%, 53%);
+  box-shadow: inset 0px -8px hsl(39, 89%, 49%);
+}
+
+.icon-box-rock {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-box-paper {
+  top: 0;
+  left: 0;
+}
+.icon-box-scissors {
+  top: 0;
+  right: 0;
+}
+
+.icon-triangle {
+  z-index: -300;
+  width: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  display: none;
+}
+
+.playing-container {
+  position: relative;
+  height: 22rem;
+  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  justify-items: center;
+}
+
+.heading-2 {
+  color: var(--white-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+.circle {
+  width: 12rem;
+  height: 12rem;
+  background-color: hsl(237, 49%, 15%);
+  border-radius: 20rem;
+}
+.choice {
+  position: relative;
+}
+
+.choice .icon-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(1.1) translate(-50%, -50%);
 }
