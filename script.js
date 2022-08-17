@@ -17,12 +17,19 @@ statusBox.classList.add("hidden");
 overlay.classList.add("hidden");
 
 let score = 0;
-scoreEl.innerHTML = "0";
+(function () {
+  const data = JSON.parse(localStorage.getItem("score"));
+  if (!data) return;
+  score = +data;
+})();
+
+scoreEl.innerHTML = `${score}`;
 // Adding Helper functions
 const updateScore = function (winner) {
   if (!winner || winner === "computer") return;
   if (winner === "player") score++;
   scoreEl.innerHTML = `${score}`;
+  localStorage.setItem("score", JSON.stringify(score));
 };
 
 const createChosen = function (chosen) {
