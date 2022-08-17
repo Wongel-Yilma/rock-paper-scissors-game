@@ -16,9 +16,14 @@ playingContainer.classList.add("hidden");
 statusBox.classList.add("hidden");
 overlay.classList.add("hidden");
 
-let score;
+let score = 0;
+scoreEl.innerHTML = "0";
 // Adding Helper functions
-const displayScore = function () {};
+const updateScore = function (winner) {
+  if (!winner || winner === "computer") return;
+  if (winner === "player") score++;
+  scoreEl.innerHTML = `${score}`;
+};
 
 const createChosen = function (chosen) {
   return `<div class="icon-box icon-box-${chosen}">
@@ -82,6 +87,7 @@ container.addEventListener("click", function (e) {
     displayStatus(winner);
     setTimeout(() => {
       statusBox.classList.remove("hidden");
+      updateScore(winner);
     }, 1000);
   }, 1000);
 });
