@@ -29,6 +29,7 @@
         color: hsl(228, 45%, 44%);
       }
     </style>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header class="header">
@@ -44,7 +45,7 @@
     </header>
     <main>
       <div class="game-section">
-        <div class="container hidden">
+        <div class="container">
           <img
             class="icon-triangle"
             src="images/bg-triangle.svg"
@@ -73,36 +74,25 @@
           </div>
         </div>
 
-        <div class="playing-container">
+        <div class="playing-container hidden">
           <div class="game-box">
-            <h3 class="heading-3">You Win</h3>
+            <h3 class="heading-3 game-status">You Win</h3>
             <button class="game-btn">Play Again</button>
           </div>
           <h2 class="heading-2">You picked</h2>
           <h2 class="heading-2">The house picked</h2>
 
           <div class="choice player-choice">
-            <!-- <div class="circle"></div> -->
-            <div class="icon-box icon-box-rock">
-              <div class="icon-border-rock"></div>
-              <div class="icon-border-white"></div>
-              <img class="icon" src="images/icon-rock.svg" alt="Paper" />
-            </div>
+            <div class="circle"></div>
           </div>
           <div class="choice computer-choice">
-            <div class="winner"></div>
-            <div class="icon-box icon-box-scissors">
-              <div class="icon-border-scissors"></div>
-              <div class="icon-border-white"></div>
-              <img class="icon" src="images/icon-scissors.svg" alt="Scissors" />
-            </div>
             <div class="circle"></div>
           </div>
         </div>
 
         <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
         <button class="btn-rules">Rules</button>
-        <div class="overlay">
+        <div class="overlay hidden">
           <div class="rules">
             <img
               class="btn-close"
