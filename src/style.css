@@ -247,6 +247,9 @@ body {
 
 .game-box {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 12rem;
   display: flex;
   flex-direction: column;
@@ -263,9 +266,6 @@ body {
 .game-btn {
   width: 100%;
   border: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: var(--white-color);
   padding: 1.2rem;
   border-radius: 0.5rem;
@@ -273,4 +273,23 @@ body {
   text-transform: uppercase;
   font-size: 1.8rem;
   color: hsl(237, 49%, 15%);
+}
+
+.winner {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background-image: radial-gradient(
+    circle,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%) 80%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  z-index: -500;
 }
