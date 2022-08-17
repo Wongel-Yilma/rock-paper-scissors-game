@@ -10,12 +10,15 @@ const gameBtn = document.querySelector(".game-btn");
 const rulesBtn = document.querySelector(".btn-rules");
 const overlay = document.querySelector(".overlay");
 const closeBtn = document.querySelector(".btn-close");
+const scoreEl = document.querySelector(".score");
 
 playingContainer.classList.add("hidden");
 statusBox.classList.add("hidden");
 overlay.classList.add("hidden");
 
+let score;
 // Adding Helper functions
+const displayScore = function () {};
 
 const createChosen = function (chosen) {
   return `<div class="icon-box icon-box-${chosen}">

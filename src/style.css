@@ -212,8 +212,8 @@ body {
   position: relative;
   height: 40rem;
   width: 80rem;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -327,4 +327,79 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    min-height: 100vh;
+  }
+
+  .heading-1 {
+    font-size: 2.8rem;
+  }
+  .game-section {
+    margin-top: 12rem;
+  }
+  .icon-box {
+    height: 10rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .header {
+    width: 80vw;
+  }
+  .icon-box {
+    height: 4rem;
+    width: 4rem;
+  }
+  .icon-border-paper,
+  .icon-border-rock,
+  .icon-border-scissors {
+    height: 15rem;
+    width: 15rem;
+  }
+  .icon-border-white {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .icon-box-rock {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon-box-paper {
+    top: 0;
+    left: 20%;
+  }
+  .icon-box-scissors {
+    top: 0;
+    right: 20%;
+  }
+  .container {
+    position: relative;
+    height: 30rem;
+    width: 100vw;
+  }
+  .playing-container {
+    width: 100vw;
+    height: 25rem;
+  }
+  .player-choice {
+    grid-row: 1/2;
+  }
+  .computer-choice {
+    grid-row: 1/2;
+  }
+  .game-box {
+    top: 21rem;
+  }
+  .btn-rules {
+    align-self: center;
+    margin-top: 10rem;
+  }
 }
